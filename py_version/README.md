@@ -1,4 +1,4 @@
-# РАБОТАЕТ ТОЛЬКО ПОД WINDOWS | WORK ONLY FOR WINDOWS
+# РАБОТАЕТ ТОЛЬКО ПОД WINDOWS | WORKS ONLY FOR WINDOWS
 
 # Сначала установите зависимости: py -m pip install -r requirements.txt
 
