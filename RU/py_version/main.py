@@ -22,9 +22,14 @@ class App(customtkinter.CTk):
         self.title('VPN_WITH_PROXY')
         self.resizable(False, False)
         self.toplevel_window = None
-        self.logo = customtkinter.CTkImage(dark_image=Image.open('vpn_logo.png'), size=(460, 460))
-        self.logo_label = customtkinter.CTkLabel(master=self, text='', image=self.logo)
-        self.logo_label.place(relx=0.5, rely=0.20, anchor=tkinter.CENTER)
+        try:
+            self.logo = customtkinter.CTkImage(dark_image=Image.open('vpn_logo.png'), size=(460, 460))
+            self.logo_label = customtkinter.CTkLabel(master=self, text='', image=self.logo)
+            self.logo_label.place(relx=0.5, rely=0.20, anchor=tkinter.CENTER)
+        except:
+            self.lbl_error = customtkinter.CTkLabel(self, text='Скорее всего картинка с логотипом \n находится не в одной директории')
+            self.lbl_error.place(relx=0.5, rely=0.20, anchor=tkinter.CENTER)
+
 
         self.lbl_enable = customtkinter.CTkLabel(self, text='VPN был успешно включен ✅')
         self.lbl_disable = customtkinter.CTkLabel(self, text='VPN был успешно выключен ❌')
