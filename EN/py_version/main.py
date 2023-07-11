@@ -28,6 +28,7 @@ class App(customtkinter.CTk):
             self.logo_label.place(relx=0.5, rely=0.20, anchor=tkinter.CENTER)
         except:
             self.lbl_error = customtkinter.CTkLabel(self, text='most likely, the logo image \n is not in the same directory')
+            self.lbl_error.place(relx=0.5, rely=0.20, anchor=tkinter.CENTER)
 
         self.lbl_enable = customtkinter.CTkLabel(self, text='VPN was successfully enabled ✅')
         self.lbl_disable = customtkinter.CTkLabel(self, text='VPN was successfully turned off ❌')
